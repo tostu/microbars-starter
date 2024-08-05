@@ -28,6 +28,8 @@ dependencies {
     implementation("io.micronaut.validation:micronaut-validation")
     implementation("io.micronaut.views:micronaut-views-handlebars")
     implementation("jakarta.validation:jakarta.validation-api")
+    implementation("org.springframework.security:spring-security-crypto:6.2.0")
+    implementation("org.slf4j:jcl-over-slf4j")
     compileOnly("io.micronaut:micronaut-http-client")
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
