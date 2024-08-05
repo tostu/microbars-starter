@@ -2,9 +2,11 @@ package com.example.adapter.postgres.user;
 
 import io.micronaut.data.annotation.Embeddable;
 import io.micronaut.data.annotation.Relation;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 @Embeddable
 class UserRoleId {
 

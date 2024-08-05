@@ -3,10 +3,13 @@ package com.example.adapter.postgres.user;
 import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
+import io.micronaut.serde.annotation.Serdeable;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
 
-@MappedEntity
+@Serdeable
+@MappedEntity("role")
 record RoleDao(
         @Id
         @Nullable

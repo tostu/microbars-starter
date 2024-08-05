@@ -7,7 +7,7 @@ import io.micronaut.data.model.query.builder.sql.Dialect;
 import io.micronaut.data.repository.CrudRepository;
 import jakarta.validation.constraints.NotBlank;
 
-import java.util.List;
+import java.util.stream.Stream;
 
 @Repository("postgres")
 @JdbcRepository(dialect = Dialect.POSTGRES)
@@ -17,5 +17,5 @@ interface UserRoleRepository extends CrudRepository<UserRoleDao, Long> {
     INNER JOIN user_role ON user_role.id_role_id = role.id 
     INNER JOIN "user" user_ ON user_role.id_user_id = user_.id 
     WHERE user_.username = :username""")
-    List<String> findAllAuthoritiesByUsername(@NotBlank String username);
+    Stream<String> findAllAuthoritiesByUsername(@NotBlank String username);
 }

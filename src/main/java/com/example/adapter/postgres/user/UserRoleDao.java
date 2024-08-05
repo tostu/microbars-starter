@@ -2,8 +2,12 @@ package com.example.adapter.postgres.user;
 
 import io.micronaut.data.annotation.EmbeddedId;
 import io.micronaut.data.annotation.MappedEntity;
+import io.micronaut.serde.annotation.Serdeable;
+import lombok.Getter;
 
-@MappedEntity
+@Getter
+@Serdeable
+@MappedEntity("user_role")
 class UserRoleDao {
 
     @EmbeddedId

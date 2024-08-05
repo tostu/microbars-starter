@@ -5,9 +5,12 @@ import io.micronaut.core.annotation.Nullable;
 import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
+import io.micronaut.serde.annotation.Serdeable;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
 
-@MappedEntity
+@Serdeable
+@MappedEntity("user")
 record UserDao(
     @Id
     @Nullable
@@ -21,35 +24,4 @@ record UserDao(
     boolean accountExpired,
     boolean accountLocked,
     boolean passwordExpired
-) implements UserState {
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    @Override
-    public boolean isAccountExpired() {
-        return accountExpired;
-    }
-
-    @Override
-    public boolean isAccountLocked() {
-        return accountLocked;
-    }
-
-    @Override
-    public boolean isPasswordExpired() {
-        return false;
-    }
-}
+) { }
