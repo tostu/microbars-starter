@@ -6,7 +6,6 @@ import io.micronaut.data.annotation.MappedEntity;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
 
 @Serdeable
 @MappedEntity("role")

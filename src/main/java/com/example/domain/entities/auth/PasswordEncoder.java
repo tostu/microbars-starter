@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.domain.entities.auth;
 
 import jakarta.validation.constraints.NotBlank;
 

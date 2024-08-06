@@ -6,6 +6,6 @@ import jakarta.validation.constraints.NotBlank;
 import java.util.Optional;
 
 public interface UserService {
-    Optional<User> findByUsername(@NonNull @NotBlank User.Username username);
-
+    Optional<User> findUserByUsername(@NonNull @NotBlank User.Username username);
+    void createUser(@NonNull @NotBlank User user);
 }

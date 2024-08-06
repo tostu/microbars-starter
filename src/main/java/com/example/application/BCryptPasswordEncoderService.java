@@ -1,6 +1,6 @@
 package com.example.application;
 
-import com.example.domain.PasswordEncoder;
+import com.example.domain.entities.auth.PasswordEncoder;
 import io.micronaut.core.annotation.NonNull;
 import jakarta.inject.Singleton;
 import jakarta.validation.constraints.NotBlank;

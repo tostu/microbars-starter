@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 @Repository("postgres")
 @JdbcRepository(dialect = Dialect.POSTGRES)
-interface UserRoleRepository extends CrudRepository<UserRoleDao, Long> {
+interface UserRoleRepository extends CrudRepository<UserRoleDao, UserRoleId> {
     @Query("""
     SELECT authority FROM role 
     INNER JOIN user_role ON user_role.id_role_id = role.id 
