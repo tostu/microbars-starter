@@ -35,6 +35,8 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.flywaydb:flyway-database-postgresql")
     runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("org.webjars.npm:alpinejs:3.14.1")
+    runtimeOnly("org.webjars.npm:tailwindcss:3.4.1")
     testImplementation("io.micronaut:micronaut-http-client")
     testImplementation("org.assertj:assertj-core")
     testImplementation("org.mockito:mockito-core")
