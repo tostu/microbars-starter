@@ -10,7 +10,7 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor
-public class User {
+public class User implements UserState {
     @NotNull
     Username username;
     @NotNull
@@ -22,10 +22,22 @@ public class User {
     private boolean accountLocked;
     private boolean passwordExpired;
 
+    @Override
+    public String getUsernameString() {
+        return username.value();
+    }
+
+    @Override
+    public String getPasswordString() {
+        return password.value();
+    }
+
+    @Override
+    public List<String> getAuthorityStringList() {
+        return authorityList.stream().map(User.Authority::value).toList();
+    }
+
     public record Username(@NotNull @NotEmpty String value) {}
     public record Password(@NotNull @NotEmpty String value) {}
     public record Authority(@NotNull @NotEmpty String value) {}
-
-
-
 }
