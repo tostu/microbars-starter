@@ -1,4 +1,4 @@
-package com.example.adapter.postgres.user;
+package com.example.adapter.passive.user;
 
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.data.annotation.GeneratedValue;

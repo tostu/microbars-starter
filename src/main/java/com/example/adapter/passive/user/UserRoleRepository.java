@@ -1,4 +1,4 @@
-package com.example.adapter.postgres.user;
+package com.example.adapter.passive.user;
 
 import io.micronaut.data.annotation.Query;
 import io.micronaut.data.annotation.Repository;

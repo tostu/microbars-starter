@@ -1,4 +1,4 @@
-package com.example.adapter.postgres.user;
+package com.example.adapter.passive.user;
 
 import io.micronaut.data.annotation.EmbeddedId;
 import io.micronaut.data.annotation.MappedEntity;

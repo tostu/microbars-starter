@@ -1,4 +1,4 @@
-package com.example.adapter.postgres.user;
+package com.example.adapter.passive.user;
 
 import com.example.domain.entities.user.User;
 import com.example.domain.entities.user.UserAlreadyExistsException;
